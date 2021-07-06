@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Predator Prey Simulation</title>
+</head>
+
+<body>
+
+  <h1>Econ Simulator</h1>
+  <canvas id="graph"></canvas>
+
+  <form action="#" onsubmit="return false">
+    <h3>Variables:</h3>
+
+    <label for="Prey">
+      Initial <font color="blue">Employment Rate:</font>
+    </label>
+    <input type="number" id="Prey" name="Prey" min="0" max="100" step="0.1" value="0.9">
+
+    <label for="Predator">
+      Initial <font color="red">Workers Share in Output:</font>
+    </label>
+    <input type="number" id="Predator" name="Predator" min="0" max="100" step="0.1" value="1">
+
+    <br>
+
+    <label for="Alpha">Labor Productivity Growth Rate:</label>
+    <input type="number" id="Alpha" name="Alpha" min="0" max="10" step="0.1" value="0.3">
+
+    <label for="Beta">Labor Force Growth Rate:</label>
+    <input type="number" id="Beta" name="Beta" min="0" max="10" step="0.1" value="0.9">
+
+    <br>
+
+    <label for="Sigma">Capital Output ratio:</label>
+    <input type="number" id="Sigma" name="Sigma" min="0" max="10" step="0.1" value="0.3">
+
+    <label for="Gamma">Gamma:</label>
+    <input type="number" id="Gamma" name="Gamma" min="0" max="10" step="0.1" value="0.2">
+
+    <br>
+
+    <label for="Row">Row:</label>
+    <input type="number" id="Row" name="Row" min="0" max="10" step="0.1" value="0.6">
+
+    <br>
+    <h3>Simulation Settings:</h3>
+
+    <label for="TimeStep">TimeStep:</label>
+    <input type="number" id="TimeStep" name="TimeStep" min="0" max="10" step="0.001" value="0.001">
+
+    <label for="FinalTime">Final Time:</label>
+    <input type="number" id="FinalTime" name="FinalTime" min="0" step="1" value="50">
+
+    <input type="button" name="Submit" value="Submit" onclick="submitted();" />
+  </form>
+
+  <h1>Goodwin’s employment-wage cycle model</h1>
+  <ul>
+    <li>Assumption 1: Both technological progress and growth in labor force are constant.</li>
+    <li>Assumption 2: There are only two factors of production (labor and capital).</li>
+    <li>Assumption 3: All quantities mentioned are real and net.</li>
+    <li>Assumption 5: The ratio between capital and output is constant.</li>
+    <li>Assumption 6: The real wage rate rises in the neighborhood of full employment.</li>
+  </ul>
+  <h5><a target="_blank" href="https://en.wikipedia.org/wiki/Goodwin_model_(economics)">More Info</a></h5>
+  <script src="code.js"></script>
+
+</body>
+
+</html>
